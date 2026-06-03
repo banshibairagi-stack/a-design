@@ -1,0 +1,8 @@
+
+
+/*  make parent container a flex container to center child elements */
+.ad_section_wrapper.ct-section .ad-section-inner-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

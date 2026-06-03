@@ -1,0 +1,85 @@
+/* 1. Box sizing & spacing */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Root / font settings */
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* prevent font scaling on mobile rotate */
+  text-size-adjust: 100%;
+}
+
+/* 3. Body defaults */
+body {
+  min-height: 100vh;
+  font-family: inherit;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;  /* smoother fonts on Mac/Chrome */
+  -moz-osx-font-smoothing: grayscale;  /* smoother fonts on Mac/Firefox */
+}
+
+/* 4. Media elements — make responsive by default */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Form elements — don't inherit font by default (browser bug) */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Headings & paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  overflow-wrap: break-word;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; /* prevent text overflow */
+}
+
+/* 7. Lists (if you don't want default bullets/numbers) */
+ul, ol {
+  list-style: none;
+}
+
+/* 8. Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 10. Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid;
+}
+
+/* 11. Textarea resize control */
+textarea {
+  resize: vertical; /* only allow vertical resize */
+}
+
+/* 12. Remove button default styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 13. Hidden elements */
+[hidden] {
+  display: none;
+}

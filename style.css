@@ -1,0 +1,14 @@
+/*
+Theme Name: A Design
+Author: Banshi
+Version: 1.0
+Text Domain: a-design
+*/
+
+
+/* Option 1 — Hard reset (zeroes everything out) */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
