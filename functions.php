@@ -25,11 +25,36 @@ add_action('after_setup_theme', 'adesign_theme_setup');
 function css_learning_assets() {
 
     wp_enqueue_style(
-        'theme-style',
+        'reset=all-style',
         get_template_directory_uri() . '/assets/css/reset.css',
         [],
         '1.0'
     );
+    
+    /* Site page layout define css */
+    wp_enqueue_style(
+        'page-structure',
+        get_template_directory_uri() . '/assets/css/page-structure.css',
+        ['theme-style'],
+        '1.0'
+    );
+
+     wp_enqueue_style(
+        'theme-style',
+        get_template_directory_uri() . '/assets/css/main.css',
+        ['reset=all-style'],
+        '1.0'
+    );
+
+    wp_enqueue_style(
+        'short-attributes',
+        get_template_directory_uri() . '/assets/css/short-attributes.css',
+        ['theme-style'],
+        '1.0'
+    );
+
+
+   
 
     // wp_enqueue_script(
     //     'theme-script',

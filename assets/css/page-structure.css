@@ -1,0 +1,99 @@
+/* ================================================
+   THEME ARCHITECTURE — Desktop First
+   Breakpoints: 1920, 1618, 1199, 992, 768, 480
+   Strategy: container has one fixed max-width rule,
+             padding handles all responsive spacing.
+   ================================================ */
+
+
+/* ─── Base Themes ─────────────────────────────── */
+
+.primary   { background-color: white; }
+.secondary { background-color: #f4f6f9; }
+.tertiary  { background-color: #1a1a2e; }
+
+
+/* ─── Container ───────────────────────────────── */
+/*
+   Single rule — never changes across breakpoints.
+   max-width only activates at 1920px+ where the
+   viewport is wide enough to exceed 1620px after
+   padding is subtracted. On all smaller screens
+   the container stays naturally fluid (100%).
+*/
+
+.container {
+    max-width: 1620px;
+    margin: 0 auto;
+}
+
+
+/* ─── Section — Desktop First Base (1920px+) ─── */
+
+.section {
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+
+/* ─── 1618px and below ────────────────────────── */
+
+@media (max-width: 1618px) {
+    .section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+
+/* ─── 1199px and below ────────────────────────── */
+
+@media (max-width: 1199px) {
+    .section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+
+/* ─── 992px and below ─────────────────────────── */
+
+@media (max-width: 992px) {
+    .section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+
+/* ─── 768px and below ─────────────────────────── */
+
+@media (max-width: 768px) {
+    .section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+/* ─── 480px and below ─────────────────────────── */
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

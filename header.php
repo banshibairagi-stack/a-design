@@ -8,10 +8,12 @@
 
 <body <?php body_class(); ?>>
 
-<header class="site-header">
-    <div class="container">
 
-       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+   <!-- ─── NAV ─────────────────────────────────────── -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav">
+                 <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
             <?php
             if (has_custom_logo()) {
                 the_custom_logo();
@@ -20,12 +22,14 @@
             }
             ?>
         </a>
+                <ul class="nav-links">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <a href="#" class="nav-cta">Get started</a>
+                <button class="nav-burger" aria-label="Open menu">&#9776;</button>
+            </nav>
+        </div>
+    </header>
 
-        <?php
-        wp_nav_menu([
-            'theme_location' => 'primary'
-        ]);
-        ?>
-
-    </div>
-</header>
