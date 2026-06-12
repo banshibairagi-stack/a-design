@@ -21,10 +21,14 @@
    padding is subtracted. On all smaller screens
    the container stays naturally fluid (100%).
 */
+:root {
+    --container-max: 1620px;
+}
 
-.container {
-    max-width: 1620px;
+.sd-container {
+    max-width: var(--container-max); ;
     margin: 0 auto;
+    z-index: 1;
 }
 
 
@@ -36,6 +40,7 @@
     padding-bottom: 64px;
     padding-left: 120px;
     padding-right: 120px;
+    position: relative;
 }
 
 
@@ -95,5 +100,171 @@
         padding-bottom: 32px;
         padding-left: 16px;
         padding-right: 16px;
+    }
+}
+
+
+
+/* Define Typography and other global styles here, or in separate files if preferred. */    
+
+.type-item {
+   margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+}
+
+
+
+:root{
+    /* H1 */
+    --h1-desktop: 36px;
+    --h1-mobile: 28px;
+    --h1-line-height: 1.2;
+
+    /* H2 */
+    --h2-desktop: 30px;
+    --h2-mobile: 24px;
+    --h2-line-height: 1.25;
+
+    /* H3 */
+    --h3-desktop: 24px;
+    --h3-mobile: 20px;
+    --h3-line-height: 1.3;
+
+    /* H4 */
+    --h4-desktop: 20px;
+    --h4-mobile: 18px;
+    --h4-line-height: 1.35;
+
+    /* H5 */
+    --h5-desktop: 18px;
+    --h5-mobile: 16px;
+    --h5-line-height: 1.4;
+
+    /* H6 */
+    --h6-desktop: 16px;
+    --h6-mobile: 14px;
+    --h6-line-height: 1.4;
+
+    /* Default desktop scale */
+    --font-scale: 1;
+
+
+    /* any special cases Start */
+     /* H1 */
+    --h1-special-desktop: 72px;
+    --h1-special-mobile: 32px;
+    --h1-special-line-height: 1.2;
+
+    /* H2 */
+    --h2-special-desktop: 36px;
+    --h2-special-mobile: 28px;
+    --h2-special-line-height: 1.25;
+    /* any special cases  End */
+}
+
+/* any special cases Start */
+h1.special{
+    font-size: max(
+        calc(var(--h1-special-desktop) * var(--font-scale)),
+        var(--h1-special-mobile)
+    );
+    line-height: var(--h1-special-line-height);
+    font-weight: 800;
+}
+
+h2.special{
+    font-size: max(
+        calc(var(--h2-special-desktop) * var(--font-scale)),
+        var(--h2-special-mobile)
+    );
+    line-height: var(--h2-special-line-height);
+    font-weight: 600;
+}
+
+/* any special cases  End */
+/* Typography */
+h1{
+    font-size: max(
+        calc(var(--h1-desktop) * var(--font-scale)),
+        var(--h1-mobile)
+    );
+    line-height: var(--h1-line-height);
+    font-weight: 800;
+}
+
+h2{
+    font-size: max(
+        calc(var(--h2-desktop) * var(--font-scale)),
+        var(--h2-mobile)
+    );
+    line-height: var(--h2-line-height);
+}
+
+h3{
+    font-size: max(
+        calc(var(--h3-desktop) * var(--font-scale)),
+        var(--h3-mobile)
+    );
+    line-height: var(--h3-line-height);
+}
+
+h4{
+    font-size: max(
+        calc(var(--h4-desktop) * var(--font-scale)),
+        var(--h4-mobile)
+    );
+    line-height: var(--h4-line-height);
+}
+
+h5{
+    font-size: max(
+        calc(var(--h5-desktop) * var(--font-scale)),
+        var(--h5-mobile)
+    );
+    line-height: var(--h5-line-height);
+}
+
+h6{
+    font-size: max(
+        calc(var(--h6-desktop) * var(--font-scale)),
+        var(--h6-mobile)
+    );
+    line-height: var(--h6-line-height);
+}
+
+/* ─────────────────── Font Scaling ───────────────────────────*/
+/* 1618px */
+@media (max-width:1618px){
+    :root{
+        --font-scale: .8;
+    }
+}
+
+/* 1199px : 0.8 * 0.75 = 0.6 */
+@media (max-width:1199px){
+    :root{
+        --font-scale: .6;
+    }
+}
+
+/* 992px : 0.6 * 0.75 = 0.45 */
+@media (max-width:992px){
+    :root{
+        --font-scale: .45;
+    }
+}
+
+/* 768px */
+@media (max-width:768px){
+    :root{
+        --font-scale: 0;
     }
 }
